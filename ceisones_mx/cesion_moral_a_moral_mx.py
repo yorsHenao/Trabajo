@@ -7,14 +7,13 @@ def fecha(d: date )->str:
             "julio","agosto","septiembre","octubre","noviembre","diciembre"]
     return f"{d.day} de {meses[d.month-1]} de {d.year}"
 
-
-def generar_cesion_fisica_a_fisica():
+def generar_cesion_moral_a_moral():
     #ruta
-    plantilla = Path("plantillas/mexico/cesion_fisica_a_fisica_mx.docx")
+    plantilla = Path("plantillas/mexico/cesion_moral_a_moral_mx.docx")
 
 #palabras a rellenar
 
-    print(f"{"*"*10}Cesión Personas fisicas{"*"*10}")
+    print(f"{"*"*10}Cesión Personas fisicas a moral{"*"*10}")
 
     #contrato antiguo o nuevo
 
@@ -32,15 +31,17 @@ def generar_cesion_fisica_a_fisica():
 
 
     #cedente
-    nombre_cedente = input("Ingrese nombre cedente: ")
+    nombre_cedente = input("Ingrese razón social cedente: ")
+    nombre_rl_cedente =input("Ingrese nombre representante legal cedente: ")
     domicilio_cedente = input("Ingrese dirección cedente: ")
     correo_cedente = input("Ingrese correo cedente: ")
 
     #cesionario
-    nombre_cesionario = input("Ingrese nombre cesionario: ")
-    rfc_cesionario = input("Ingrese RFC cesionario: ")
-    domicilio_cesionario = input("Ingrese dirección cesionario: ")
-    correo_cesionario = input("Ingrese correo cesionario: ")
+    nombre_cesionario = input("Ingrese razón social cesionario: ")
+    nombre_rl_cesionario = input("Ingrese nombre representante legal cesionario")
+    rfc_cesionario = input("Ingrese RFC razón social cesionario: ")
+    domicilio_cesionario = input("Ingrese dirección razón social cesionario: ")
+    correo_cesionario = input("Ingrese correo  razón social cesionario: ")
     marca = input("Ingrese marca: ")
 
     #fecha acuerdo principal
@@ -60,11 +61,13 @@ def generar_cesion_fisica_a_fisica():
     salida = Path("salidas/mexico/")/ nombre_archivo
 
     contexto = {
-        "NOMBRE_CEDENTE": nombre_cedente,
+        "RS_CEDENTE": nombre_cedente,
+        "RL_CEDENTE": nombre_rl_cedente,
         "DOMICILIO_CEDENTE": domicilio_cedente,
         "CORREO_CEDENTE": correo_cedente,
         
-        "NOMBRE_CESIONARIO": nombre_cesionario,
+        "RS_CESIONARIO": nombre_cesionario,
+        "RL_CESIONARIO": nombre_rl_cesionario,
         "RFC_CESIONARIO": rfc_cesionario,
         "DOMICILIO_CESIONARIO": domicilio_cesionario,
         "CORREO_CESIONARIO": correo_cesionario,
@@ -89,9 +92,4 @@ def generar_cesion_fisica_a_fisica():
     print("*"*20)
 
 if __name__ == "__main__":
-    generar_cesion_fisica_a_fisica()
-
-
-
-
-
+    generar_cesion_moral_a_moral()

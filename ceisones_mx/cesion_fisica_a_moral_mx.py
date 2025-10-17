@@ -21,7 +21,7 @@ def generar_cesion_fisica_a_moral():
     
     incluir_clausula = respuesta == "si"
 
-    contexto = {"incluir_clausula_cuarta ": incluir_clausula,}
+    contexto = {"incluir_clausula_cuarta": incluir_clausula}
 
     #clausula de pago
 
@@ -71,7 +71,7 @@ def generar_cesion_fisica_a_moral():
         "CORREO_CESIONARIO": correo_cesionario,
         "MARCA": marca,
         "NOMBRE_CLAUSULA": clausula,
-        "incluir_clausula_cuarta": respuesta,
+        "incluir_clausula_cuarta": incluir_clausula,
 
 
         "FECHA_ACUERDO_P":fecha_contrato,

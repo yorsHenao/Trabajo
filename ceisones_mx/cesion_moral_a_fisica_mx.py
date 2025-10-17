@@ -7,14 +7,13 @@ def fecha(d: date )->str:
             "julio","agosto","septiembre","octubre","noviembre","diciembre"]
     return f"{d.day} de {meses[d.month-1]} de {d.year}"
 
-
-def generar_cesion_fisica_a_fisica():
+def generar_cesion_moral_a_fisica():
     #ruta
-    plantilla = Path("plantillas/mexico/cesion_fisica_a_fisica_mx.docx")
+    plantilla = Path("plantillas/mexico/cesion_moral_a_fisica_mx.docx")
 
 #palabras a rellenar
 
-    print(f"{"*"*10}Cesión Personas fisicas{"*"*10}")
+    print(f"{"*"*10}Cesión Personas fisicas a moral{"*"*10}")
 
     #contrato antiguo o nuevo
 
@@ -26,13 +25,11 @@ def generar_cesion_fisica_a_fisica():
 
     #clausula de pago
 
-    nombre_clausula = input("Ingresa nombre de la cláusula (Forma de pago o Contraprestación): ").strip().lower()
-
-    clausula = {"NOMBRE_CLAUSULA":nombre_clausula}
-
+    nombre_clausula = input("Ingresa nombre de la cláusula (forma de pago o Contraprestacion): ").strip().lower()
 
     #cedente
-    nombre_cedente = input("Ingrese nombre cedente: ")
+    nombre_cedente = input("Ingrese razón social cedente: ")
+    nombre_rl_cedente =input("Ingrese nombre representante legal cedente: ")
     domicilio_cedente = input("Ingrese dirección cedente: ")
     correo_cedente = input("Ingrese correo cedente: ")
 
@@ -60,7 +57,8 @@ def generar_cesion_fisica_a_fisica():
     salida = Path("salidas/mexico/")/ nombre_archivo
 
     contexto = {
-        "NOMBRE_CEDENTE": nombre_cedente,
+        "RS_CEDENTE": nombre_cedente,
+        "RL_CEDENTE": nombre_rl_cedente,
         "DOMICILIO_CEDENTE": domicilio_cedente,
         "CORREO_CEDENTE": correo_cedente,
         
@@ -69,7 +67,7 @@ def generar_cesion_fisica_a_fisica():
         "DOMICILIO_CESIONARIO": domicilio_cesionario,
         "CORREO_CESIONARIO": correo_cesionario,
         "MARCA": marca,
-        "NOMBRE_CLAUSULA": clausula,
+        "NOMBRE_CLAUSULA": nombre_clausula,
         "incluir_clausula_cuarta": incluir_clausula,
 
 
@@ -89,9 +87,4 @@ def generar_cesion_fisica_a_fisica():
     print("*"*20)
 
 if __name__ == "__main__":
-    generar_cesion_fisica_a_fisica()
-
-
-
-
-
+    generar_cesion_moral_a_fisica()
