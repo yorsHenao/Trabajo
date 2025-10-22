@@ -1,16 +1,20 @@
 from docxtpl import DocxTemplate
 from datetime import date
 from pathlib import Path
-from cesion_natural_a_natural import fecha
+
+def fecha(d: date )-> str:
+    meses =["enero","febrero","marzo","abril","mayo","junio",
+            "julio","agosto","septiembre","octubre","noviembre","diciembre"]
+    return f"{d.day} de {meses[d.month-1]} de {d.year}"
 
 
-def generar_cesion_juridica():
+def generar_cesion_juridica_a_juridica():
     #ruta
     plantilla = Path("plantillas/colombia/cesion_juridica_a_juridica.docx")
 
     #palabras a rellenar
 
-    print(f"{"*"*10}Cesión Personas Juridicas{"*"*10}")
+    print(f"\n{"*"*10}Cesión Personas Juridicas{"*"*10}\n")
     #cedente
     nombre_cedente = input("ingrese nombre razón social cedente: ")
     nit_cedente = input("Ingrese Nit razón social cedente: ")
@@ -71,6 +75,6 @@ def generar_cesion_juridica():
     print("*"*20)
 
 if __name__ == "__main__":
-    generar_cesion_juridica()
+    generar_cesion_juridica_a_juridica()
 
 

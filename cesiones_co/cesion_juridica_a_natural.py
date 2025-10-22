@@ -14,7 +14,7 @@ def generar_cesion_juridica_a_natural():
     plantilla = Path("plantillas/colombia/cesion_juridica_a_natural.docx")
 
     #Palabras a rellenar
-    print(f"{"*"*10}Cesión Personas juridicas a natural{"*"*10}")
+    print(f"\n{"*"*10}Cesión Personas juridicas a natural{"*"*10}\n")
     #cedente
     nombre_cedente = input("ingrese nombre razón social cedente: ")
     nit_cedente = input("Ingrese Nit razón social cedente: ")

@@ -14,7 +14,7 @@ def generar_cesion_natural_a_juridica():
     plantilla = Path("plantillas/colombia/cesion_Natural_a_Juridica.docx")
 
     #Palabras a rellenar
-    print(f"{"*"*10}Cesión Personas fisicas a juridicas{"*"*10}")
+    print(f"\n{"*"*10}Cesión Persona fisica a juridica{"*"*10}\n")
     nombre_cedente = input("Ingrese nombre cedente: ")
     cedula_cedente = input("Ingrese cedula cedente: ")
     ciudad_cedente = input("Ingrese ciudad cedente: ")
