@@ -7,7 +7,7 @@ def fecha(d: date )->str:
             "julio","agosto","septiembre","octubre","noviembre","diciembre"]
     return f"{d.day} de {meses[d.month-1]} de {d.year}"
 
-def generar_anexo_juridico_arg():
+def generar_anexo_fisica_arg():
     #ruta
     plantilla = Path("plantillas/argentina/Anexo_de_Adhesión_fisica_arg.docx")
 
@@ -70,4 +70,4 @@ def generar_anexo_juridico_arg():
     print("*"*20)
 
 if __name__ == "__main__":
-    generar_anexo_juridico_arg()
+    generar_anexo_fisica_arg()
