@@ -13,6 +13,8 @@ from cesiones_arg.cesion_fisica_a_fisica_arg import generar_cesion_fisica_a_fisi
 from cesiones_arg.cesion_fisica_a_juridica_arg import generar_cesion_fisica_a_juridica_arg
 from cesiones_arg.cesion_juridica_a_juridica_arg import generar_cesion_juridica_a_juridica_arg
 from cesiones_arg.cesion_juridica_a_fisica_arg import generar_cesion_juridica_a_fisica_arg
+from anexos_arg.anexos_fisica_arg import generar_anexo_fisica_arg
+from anexos_arg.anexos_juridica_arg import generar_anexo_juridico_arg
 
 import os
 
@@ -24,9 +26,9 @@ def volver_al_menu():
 
 def mostrar_menu():
     print(f"{"*"*10} MENU Q&A {"*"*10}\n")
-    print("1. Cesiones MX")
-    print("2. Cesiones CO")
-    print("3. Cesiones ARG")
+    print("1. MEXICO")
+    print("2. COLOMBIA")
+    print("3. ARGENTINA")
 
 def menu_mx():
     print(f"\n{"*"*10} ¿QUE FORMATO VA USAR? {"*"*10} \n")
@@ -54,6 +56,10 @@ def menu_arg():
     print("2. CESIÓN NATURAL A JURIDICA: ")
     print("3. CESIÓN JURIDICA A JURIDICA: ")
     print("4. CESIÓN JURIDICA A NATURAL: ")
+    print("***********ANEXOS*************")
+    print("5. ANEXO PERSONA NATURAL: ")
+    print("6. ANEXO PERSONA JURIDICA: ")
+
     
     opcion_arg = input("Seleccione una opción: ")
     return opcion_arg
@@ -177,6 +183,21 @@ def menu():
                 while True:
                     limpiar_pantalla()
                     generar_cesion_juridica_a_fisica_arg()
+                    otro = input("¿Generar otro documento? (s/n): ").lower()
+                    if otro != "s":
+                        break
+            elif opcion_arg == "5":
+                while True:
+                    limpiar_pantalla()
+                    generar_anexo_fisica_arg()
+                    otro = input("¿Generar otro documento? (s/n): ").lower()
+                    if otro != "s":
+                        break
+
+            elif opcion_arg == "6":
+                while True:
+                    limpiar_pantalla()
+                    generar_anexo_juridico_arg()
                     otro = input("¿Generar otro documento? (s/n): ").lower()
                     if otro != "s":
                         break
