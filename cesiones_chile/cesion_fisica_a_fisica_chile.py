@@ -36,14 +36,13 @@ def generar_cesion_fisica_a_fisica_chile():
     #banco
     numero_cuenta = input("Ingrese número de cuenta: ")
     tipo_cuenta = input("Ingrese tipo de cuenta: ")
-    cci = input("Ingrese CCI: ")
     banco = input("Ingrese nombre del banco: ")
 
     #info extra
     fecha_contrato = input("Ingrese fecha contrato: ")
 
     #nombre del archivo
-    nombre_archivo = f"Cesión de derechos. {marca}-{nombre_cesionario}-{fecha(date.today())}.docx"
+    nombre_archivo = f"Cesión de derechos. {nombre_cesionario}-{fecha(date.today())}.docx"
 
     salida = Path("salidas/chile/") / nombre_archivo
 
@@ -64,7 +63,6 @@ def generar_cesion_fisica_a_fisica_chile():
 
         "NUMERO_CUENTA": numero_cuenta,
         "TIPO_CUENTA": tipo_cuenta,
-        "CCI": cci,
         "BANCO": banco,
 
         "FECHA": fecha(date.today()),

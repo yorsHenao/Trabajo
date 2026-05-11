@@ -29,6 +29,7 @@ def generar_cesion_juridica_a_juridica_chile():
     rut_cesionario_f = f"{rut_cesionario[:-1]}-{rut_cesionario[-1]}"
     cedula_cesionario = input("Ingrese cédula cesionario (representante): ")
     domicilio_cesionario = input("Ingrese domicilio cesionario: ")
+    correo_cesionario = input("Ingrese correo cesionario: ")
 
     #marca
     marca = input("Ingrese marca: ")
@@ -36,14 +37,13 @@ def generar_cesion_juridica_a_juridica_chile():
     #banco
     numero_cuenta = input("Ingrese número de cuenta: ")
     tipo_cuenta = input("Ingrese tipo de cuenta: ")
-    cci = input("Ingrese CCI: ")
     banco = input("Ingrese nombre del banco: ")
 
     #info extra
     fecha_contrato = input("Ingrese fecha contrato: ")
 
     #nombre del archivo
-    nombre_archivo = f"Cesión de derechos. {marca}-{rs_cesionario}-{fecha(date.today())}.docx"
+    nombre_archivo = f"Cesión de derechos. {rs_cesionario}-{fecha(date.today())}.docx"
 
     salida = Path("salidas/chile/") / nombre_archivo
 
@@ -59,12 +59,12 @@ def generar_cesion_juridica_a_juridica_chile():
         "RUT_CESIONARIO": rut_cesionario_f,
         "CEDULA_CESIONARIO": cedula_cesionario,
         "DOMICILIO_CESIONARIO": domicilio_cesionario,
+        "CORREO_CESIONARIO": correo_cesionario,
 
         "MARCA": marca,
 
         "NUMERO_CUENTA": numero_cuenta,
         "TIPO_CUENTA": tipo_cuenta,
-        "CCI": cci,
         "BANCO": banco,
 
         "FECHA": fecha(date.today()),
