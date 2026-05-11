@@ -20,6 +20,11 @@ from cesiones_pe.cesion_fisico_a_fisico_pe import generar_cesion_fisica_a_fisica
 from cesiones_pe.cesion_fisico_a_moral_pe import generar_cesion_fisica_a_moral_peru
 from cesiones_pe.cesion_moral_a_fisico_pe import generar_cesion_moral_a_fisica_peru
 from cesiones_pe.cesion_moral_a_moral_pe import generar_cesion_moral_a_moral_peru
+#CHILE
+from cesiones_chile.cesion_fisica_a_fisica_chile import generar_cesion_fisica_a_fisica_chile
+from cesiones_chile.cesion_fisica_a_juridica_chile import generar_cesion_fisica_a_juridica_chile
+from cesiones_chile.cesion_juridica_a_fisica_chile import generar_cesion_juridica_a_fisica_chile
+from cesiones_chile.cesion_juridica_a_juridica_chile import generar_cesion_juridica_a_juridica_chile
 
 
 import os
@@ -36,6 +41,7 @@ def mostrar_menu():
     print("2. COLOMBIA")
     print("3. ARGENTINA")
     print("4. PERU")
+    print("5. CHILE")
 
 def menu_mx():
     print(f"\n{"*"*10} ¿QUE FORMATO VA USAR? {"*"*10} \n")
@@ -79,6 +85,16 @@ def menu_pe():
     
     opcion_pe = input("Seleccione una opción: ")
     return opcion_pe
+
+def menu_chile():
+    print(f"\n{"*"*10} ¿QUE FORMATO VA USAR? {"*"*10} \n")
+    print("1. CESIÓN FISICA A FISICA: ")
+    print("2. CESIÓN FISICA A JURIDICA: ")
+    print("3. CESIÓN JURIDICA A FISICA: ")
+    print("4. CESIÓN JURIDICA A JURIDICA: ")
+    
+    opcion_chile = input("Seleccione una opción: ")
+    return opcion_chile
 
 def menu():
     while True:
@@ -263,6 +279,45 @@ def menu():
                 print("Opción invalida")
                 input("Presiona Enter para continuar...")
         
+        elif opcion == "5":
+            limpiar_pantalla()
+            opcion_chile = menu_chile()
+
+            if opcion_chile == "1":
+                while True:
+                    limpiar_pantalla()
+                    generar_cesion_fisica_a_fisica_chile()
+                    otro = input("¿Generar otro documento? (s/n): ").lower()
+                    if otro != "s":
+                        break
+            
+            elif opcion_chile == "2":
+                while True:
+                    limpiar_pantalla()
+                    generar_cesion_fisica_a_juridica_chile()
+                    otro = input("¿Generar otro documento? (s/n): ").lower()
+                    if otro != "s":
+                        break
+            
+            elif opcion_chile == "3":
+                while True:
+                    limpiar_pantalla()
+                    generar_cesion_juridica_a_fisica_chile()
+                    otro = input("¿Generar otro documento? (s/n): ").lower()
+                    if otro != "s":
+                        break
+                
+            elif opcion_chile == "4":
+                while True:
+                    limpiar_pantalla()
+                    generar_cesion_juridica_a_juridica_chile()
+                    otro = input("¿Generar otro documento? (s/n): ").lower()
+                    if otro != "s":
+                        break
+            
+            else:
+                print("Opción invalida")
+                input("Presiona Enter para continuar...")
         
 
 if __name__ == "__main__":

@@ -43,7 +43,7 @@ def generar_anexo_fisica_arg():
 
     nombre_archivo = f"Anexo adhesión. Rappi-{aliado}-{fecha(date.today())}.docx"
 
-    salida = Path("salidas/argentina/")/ nombre_archivo
+    salida = Path("D:/salidas/argentina/")/ nombre_archivo
 
     contexto = {
         "ALIADO": aliado,

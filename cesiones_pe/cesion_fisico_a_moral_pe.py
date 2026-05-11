@@ -52,7 +52,7 @@ def generar_cesion_fisica_a_moral_peru():
 
     nombre_archivo = f"Cesion de posición Contractual + adenda cambio de cuenta bancaria. Rappi-{rs_cesionario}-{fecha(date.today())}.docx"
 
-    salida = Path("salidas/peru/")/ nombre_archivo
+    salida = Path("D:/salidas/peru/")/ nombre_archivo
 
     #datos plantilla
 

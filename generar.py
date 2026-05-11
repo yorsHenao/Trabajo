@@ -21,7 +21,7 @@ ciudad = input("ciudad ")
 
 #Nombre archivo
 nombre_archivo = f"{nombre}.docx"
-salida = Path("salidas")/ nombre_archivo
+salida = Path("D:/salidas")/ nombre_archivo
 
 
 #datos plantilla

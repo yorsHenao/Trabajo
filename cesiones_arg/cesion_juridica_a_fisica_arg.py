@@ -47,7 +47,7 @@ def generar_cesion_juridica_a_fisica_arg():
 
     nombre_archivo = f" Acta Cesion de derechos. Rappi-{nombre_cesionario}-{fecha(date.today())}.docx"
 
-    salida = Path("salidas/argentina/")/ nombre_archivo
+    salida = Path("D:/salidas/argentina/")/ nombre_archivo
 
     contexto = {
         "NOMBRE_CEDENTE": nombre_cedente,

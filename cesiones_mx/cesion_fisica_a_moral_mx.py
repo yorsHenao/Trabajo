@@ -54,7 +54,7 @@ def generar_cesion_fisica_a_moral():
 
     nombre_archivo = f"Cesion de derechos. Rappi-{nombre_cesionario}-{fecha(date.today())}.docx"
 
-    salida = Path("salidas/mexico/")/ nombre_archivo
+    salida = Path("D:/salidas/mexico/")/ nombre_archivo
 
     contexto = {
         "NOMBRE_CEDENTE": nombre_cedente,

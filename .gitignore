@@ -1,0 +1,2 @@
+# Ignorar archivos Word generados en las carpetas de salida de todos los países
+salidas/**/*.docx

@@ -40,7 +40,7 @@ def generar_cesion_natural_a_natural():
 
     nombre_archivo = f"Acta cesión. Rappi-{nombre_cesionario}-{fecha(date.today())}.docx"
 
-    salida = Path("salidas/colombia/")/ nombre_archivo
+    salida = Path("D:/salidas/colombia/")/ nombre_archivo
 
     #datos plantilla
 
